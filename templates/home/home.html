@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <style>
-    body{
-        background-color: black;
-        color: white;
-        text-align: center;
-    }
-  </style>
-  <body>
-    <h1>HOME</h1>
-    <p>{{data.test}}</p>
-  </body>
-</html>
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock %}
+
+{% include 'partials/navbar.html' %}
+
+{% block content %}
+<h1>HOME</h1>
+<p>{{data.test}}</p>
+{% endblock %}
