@@ -81,4 +81,16 @@ python -m pip install --upgrade pip
 pip install flask
 
 ```
+# 4. Create Flask Environment
+
+1. create file `.flaskenv`
+2. set variables inside `.flaskenv`:
+    ```
+    FLASK_ENV=development
+    FLASK_APP=module.py
+    ```
+3. run `pip install python-dotenv`
+
+
+
 
