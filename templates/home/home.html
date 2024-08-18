@@ -6,13 +6,21 @@ Home
 {% include 'partials/navbar.html' %}
 
 {% block content %}
+
 <h1>HOME</h1>
 
 {% if data %}
 <p>{{data.test}}</p>
+<p>{{data.dictionary.var_1}}</p>
 <h1>Hello Data ✅</h1>
+<ul>
+    {% for animal in animals %}
+    <li>{{ animal}}</li>
+    {% endfor %}    
+</ul>
 {% else %}
 <h1>NO DATA ❌</h1>
 {% endif %}
+
 
 {% endblock %}
