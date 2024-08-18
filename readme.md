@@ -9,23 +9,23 @@ mkdir name_project
 ```
 
 ## initial command
-- for Windows: 
+for Windows: 
 ```
 name_project\python -m venv venv
 ```
-- for Mac|Unix: 
+for Mac|Unix: 
 ```
 name_project/python3 -m venv venv
 ```
 
 ## Activate venv
 
-- for Windows:
+for Windows:
 ```
 name_project\venv\Scripts\activate
 ```
 
-- for Mac|Unix:
+for Mac|Unix:
 ```
 name_project/source venv/bin/activate
 ```
@@ -57,16 +57,28 @@ To solve this problem, you need to change the execution policy to allow scripts 
 
 ## Result
 ```
-PS C:\Users\name_admin\Desktop\folder_proj\name_project> python -m venv venv
-PS C:\Users\name_admin\Desktop\folder_proj\name_project> python -m venv venv
-PS C:\Users\name_admin\Desktop\folder_proj\name_project> venv\Scripts\activate             
-(venv) PS C:\Users\name_admin\Desktop\folder_proj\name_project> 
+C:\Users\name_admin\Desktop\folder_proj\name_project> python -m venv venv
+C:\Users\name_admin\Desktop\folder_proj\name_project> python -m venv venv
+C:\Users\name_admin\Desktop\folder_proj\name_project> venv\Scripts\activate             
+(venv) C:\Users\name_admin\Desktop\folder_proj\name_project> 
 ```
 
-# Create Gitignore file
+# 2. Create Gitignore file
 to hide all files in the venv folder:
 - create a file named `.gitignore`
 - write `venv/`
 - save and push
 
+# 3. Installing Flask
+
+.../name_project>
+```
+python -m pip install --upgrade pip
+
+```
+
+```
+pip install flask
+
+```
 
