@@ -7,5 +7,12 @@ Home
 
 {% block content %}
 <h1>HOME</h1>
+
+{% if data %}
 <p>{{data.test}}</p>
+<h1>Hello Data ✅</h1>
+{% else %}
+<h1>NO DATA ❌</h1>
+{% endif %}
+
 {% endblock %}
