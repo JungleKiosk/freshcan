@@ -12,4 +12,4 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('home/about.html')
+    return render_template('home/about.html', data=data)

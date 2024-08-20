@@ -1,14 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>About</title>
-  </head>
+{% extends "base.html" %}
+{% block title %}
+Home
+{% endblock %}
 
-  <body>
-    <h1>ABOUT</h1>
-    <p>{{data.integer}}</p>
-    <p>{{data.dictionary.var_1}}</p>
-    <p>{{data.dictionary.var_3}}</p>
-  </body>
-</html>
+{% include 'partials/navbar.html' %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1>ABOUT</h1>
+      
+      <p>{{data.integer}}</p>
+      <p>{{data.dictionary.var_1}}</p>
+      <p>{{data.dictionary.var_3}}</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
