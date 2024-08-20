@@ -91,7 +91,46 @@ pip install flask
     ```
 3. run `pip install python-dotenv`
 
+# 5. Automatically create file 'requirements.txt'
 
+running `C:\Users\...\name_project> pip freeze > requirements.txt` and save all your python libraries with current version into requirements.txt file
+
+# 6. DB integrate
+## install libraries
+
+C:\Users\ ... \name_project\venv>
+
+1. run `pip install psycopg2`
+2. run `pip install Flask-SQLAlchemy`
+
+## DB config
+in app.py:
+```
+from flak_sqlalchemy import SQLAlchemy
+
+# config connection DB
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psqcopg2://postgres:password@localhost:5432/fc_db'
+
+# SQLAlchemy will not keep track of changes on objects unless they are explicitly added to the session.
+# This reduces memory overhead and improves performance.
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Init SQLAlchemy
+db = SQLAlchemy(app)
+
+# (Model)
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+
+    def __repr__(self):
+        return f'<User {self.username}>'
+
+# create table in DB
+with app.app_context():
+    db.create_all()
+```
 
 
 
